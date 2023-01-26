@@ -17,7 +17,7 @@ class PhoneFactory extends Factory
     public function definition()
     {
         return [
-            'number' => '01096054257',
+            'number' => fake()->phoneNumber(),
             'state' => ['valid', 'not_valid'][array_rand([0, 1])],
             'country_id' => rand(1, 6)
         ];
