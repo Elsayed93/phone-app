@@ -10,6 +10,7 @@ class Phone extends Model
     use HasFactory;
     protected $fillable = [
         'number',
-        'state'
+        'state',
+        'country_id'
     ];
 }
