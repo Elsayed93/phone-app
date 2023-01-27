@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PhoneController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/data', [PhoneController::class, 'data'])->name('phones.data');
+Route::get('/', [PhoneController::class, 'index'])->name('phones.index');
